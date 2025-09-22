@@ -32,6 +32,9 @@ void printReading(const std::string& label, const double& value) {
 
 double average(const double values[], int size) {
     // TODO: throw "Empty" if size==0, else compute average
+    if (size == 0){
+        throw std::string("Empty");
+    }
     double sum = 0;
     for (int i = 0; i < size; i++){
         sum += values[i];
@@ -41,6 +44,9 @@ double average(const double values[], int size) {
 
 double minValue(const double values[], int size) {
     // TODO: throw "Empty" if size==0, else compute min
+    if (size == 0){
+        throw std::string("Empty");
+    }
     double min = values[0];
     for (int i = 1; i < size; i++){
         if (values[i] < min){
@@ -52,6 +58,9 @@ double minValue(const double values[], int size) {
 
 double maxValue(const double values[], int size) {
     // TODO: throw "Empty" if size==0, else compute max
+    if (size == 0){
+        throw std::string("Empty");
+    }
     double max = values[0];
     for (int i = 1; i < size; i++){
         if (values[i] > max){
