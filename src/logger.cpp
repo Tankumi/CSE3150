@@ -9,7 +9,7 @@ void addReading(const std::string& label, double value,
                 int& size, int capacity) {
     // TODO: throw "Full" if size == capacity, else insert and ++size
     if (size >= capacity){
-        std::string("Full");
+        throw std::string("Full");
     }else{
         labels[size] = label;
         values[size] = value;

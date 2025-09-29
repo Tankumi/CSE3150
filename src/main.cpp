@@ -45,15 +45,26 @@ int main(int argc, char* argv[]) {
                     cout << "1=avg 2=min 3=max: ";
                     int m; cin >> m;
                     double ans = 0.0;
-                    if (m == 1) ans = average(values, size);
-                    else if (m == 2) ans = minValue(values, size);
-                    else if (m == 3) ans = maxValue(values, size);
-                    else { cout << "Unknown op\n"; break; }
+                    if (m == 1){
+                        ans = average(values, size);
+                    }
+                    else if (m == 2) {
+                        ans = minValue(values, size);
+                    }
+                    else if (m == 3) {
+                        ans = maxValue(values, size);
+                    }
+                    else {
+                        cout << "Unknown op\n"; break;
+                    }
                     cout << "result=" << ans
                          << " rounded=" << static_cast<int>(ans) << endl;
                     break;
                 }
-                case 5: running = false; break;
+                case 5: {
+                    running = false;
+                    break;
+                }
                 default: cout << "Unknown choice\n"; break;
             }
         } catch (const std::string& msg) {
